@@ -17,6 +17,7 @@ RUN go get github.com/golang/lint/golint \
     github.com/asaskevich/govalidator \
     github.com/reddotpay/awskms \
     github.com/gomodule/redigo/redis \
+    github.com/rafaeljusto/redigomock \
     github.com/hubcash/cards
 
 RUN curl -O https://bootstrap.pypa.io/get-pip.py
