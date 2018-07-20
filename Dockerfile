@@ -15,7 +15,9 @@ RUN go get github.com/golang/lint/golint \
     go.uber.org/zap \
     github.com/satori/go.uuid \
     github.com/asaskevich/govalidator \
-    github.com/reddotpay/awskms
+    github.com/reddotpay/awskms \
+    github.com/gomodule/redigo/redis \
+    github.com/hubcash/cards
 
 RUN curl -O https://bootstrap.pypa.io/get-pip.py
 RUN python get-pip.py --user
