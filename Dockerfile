@@ -23,4 +23,7 @@ RUN ~/.local/bin/pip --version
 RUN ~/.local/bin/pip install awscli --upgrade --user
 RUN ~/.local/bin/aws --version
 
+RUN apt-get install jq -y
+RUN apt-get install zip -y
+
 ENV PATH $PATH:~/.local/bin
