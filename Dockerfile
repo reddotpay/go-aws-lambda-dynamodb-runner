@@ -16,6 +16,7 @@ RUN go get github.com/golang/lint/golint \
     github.com/satori/go.uuid \
     github.com/asaskevich/govalidator \
     github.com/reddotpay/awskms \
+    github.com/reddotpay/logger \
     github.com/gomodule/redigo/redis \
     github.com/rafaeljusto/redigomock \
     github.com/hubcash/cards
