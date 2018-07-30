@@ -23,7 +23,9 @@ RUN go get github.com/golang/lint/golint \
     github.com/hubcash/cards \
     github.com/newrelic/go-agent \
     github.com/awslabs/aws-lambda-go-api-proxy/handlerfunc \
-    github.com/reddotpay/api
+    github.com/reddotpay/api \
+    github.com/gorilla/schema \
+    github.com/pariz/gountries
 
 RUN curl -O https://bootstrap.pypa.io/get-pip.py
 RUN python get-pip.py --user
