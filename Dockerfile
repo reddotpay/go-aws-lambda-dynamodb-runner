@@ -20,7 +20,10 @@ RUN go get github.com/golang/lint/golint \
     github.com/reddotpay/logger \
     github.com/gomodule/redigo/redis \
     github.com/rafaeljusto/redigomock \
-    github.com/hubcash/cards
+    github.com/hubcash/cards \
+    github.com/newrelic/go-agent \
+    github.com/awslabs/aws-lambda-go-api-proxy/handlerfunc \
+    github.com/reddotpay/api
 
 RUN curl -O https://bootstrap.pypa.io/get-pip.py
 RUN python get-pip.py --user
