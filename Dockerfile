@@ -26,7 +26,8 @@ RUN go get github.com/golang/lint/golint \
     github.com/reddotpay/api \
     github.com/gorilla/schema \
     github.com/pariz/gountries \
-    github.com/aws/aws-xray-sdk-go/...
+    github.com/aws/aws-xray-sdk-go/... \
+    golang.org/x/net/context/ctxhttp
 
 RUN curl -O https://bootstrap.pypa.io/get-pip.py
 RUN python get-pip.py --user
