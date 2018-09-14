@@ -47,4 +47,4 @@ RUN curl -L -s https://github.com/golang/dep/releases/download/v${DEP_VERSION}/d
 # Make the binary executable
 RUN chmod +x $GOPATH/bin/dep
 
-ENV PATH $PATH:~/.local/bin
+ENV PATH $PATH:~/.local/bin:$GOPATH/bin/dep
