@@ -5,6 +5,8 @@ LABEL maintainer="daryl.n.w.k@gmail.com"
 # Install golint
 ENV GOPATH /go
 ENV PATH ${GOPATH}/bin:$PATH
+ENV DEP_VERSION 0.5.0
+
 RUN go get github.com/golang/lint/golint \
     github.com/aws/aws-sdk-go \
     github.com/aws/aws-dax-go \
@@ -39,5 +41,10 @@ RUN ~/.local/bin/aws --version
 RUN apt-get update
 RUN apt-get install jq -y
 RUN apt-get install zip -y
+
+# Download the binary to bin folder in $GOPATH
+RUN curl -L -s https://github.com/golang/dep/releases/download/v${DEP_VERSION}/dep-linux-amd64 -o $GOPATH/bin/dep
+# Make the binary executable
+RUN chmod +x $GOPATH/bin/dep
 
 ENV PATH $PATH:~/.local/bin
