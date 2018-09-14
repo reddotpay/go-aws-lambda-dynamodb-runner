@@ -6,7 +6,7 @@ LABEL maintainer="daryl.n.w.k@gmail.com"
 ENV GOPATH /go
 ENV PATH ${GOPATH}/bin:$PATH
 RUN go get github.com/golang/lint/golint \
-    github.com/aws/aws-sdk-go@1.15.27 \
+    github.com/aws/aws-sdk-go \
     github.com/aws/aws-dax-go \
     github.com/antlr/antlr4/runtime/Go/antlr \
     github.com/aws/aws-lambda-go/lambda \
