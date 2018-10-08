@@ -27,6 +27,7 @@ RUN go get github.com/golang/lint/golint \
     github.com/reddotpay/redis \
     github.com/reddotpay/logger \
     github.com/reddotpay/api \
+    github.com/reddotpay/retry \
     github.com/gorilla/schema \
     github.com/pariz/gountries \
     golang.org/x/net/context/ctxhttp \
