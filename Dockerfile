@@ -32,7 +32,8 @@ RUN go get golang.org/x/lint/golint \
     github.com/gorilla/schema \
     github.com/pariz/gountries \
     golang.org/x/net/context/ctxhttp \
-    github.com/hashicorp/go-retryablehttp
+    github.com/hashicorp/go-retryablehttp \ 
+    github.com/gianebao/n36
 
 RUN curl -O https://bootstrap.pypa.io/get-pip.py
 RUN python get-pip.py --user
