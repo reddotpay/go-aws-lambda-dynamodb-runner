@@ -35,7 +35,8 @@ RUN go get golang.org/x/lint/golint \
     github.com/hashicorp/go-retryablehttp \ 
     github.com/gianebao/n36 \
     golang.org/x/oauth2/clientcredentials \
-    github.com/jinzhu/copier
+    github.com/jinzhu/copier \ 
+    github.com/google/go-querystring/query
 
 RUN curl -O https://bootstrap.pypa.io/get-pip.py
 RUN python get-pip.py --user
