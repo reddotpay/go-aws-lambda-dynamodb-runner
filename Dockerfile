@@ -47,8 +47,7 @@ RUN go get golang.org/x/lint/golint \
     golang.org/x/text/transform \
     gopkg.in/go-playground/validator.v9 \
     gopkg.in/square/go-jose.v2 \
-    github.com/shopspring/decimal \
-    github.com/andelf/go-curl
+    github.com/shopspring/decimal
 
 RUN curl -O https://bootstrap.pypa.io/get-pip.py
 RUN python get-pip.py --user
