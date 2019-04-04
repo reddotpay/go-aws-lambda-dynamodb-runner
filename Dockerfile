@@ -17,6 +17,7 @@ RUN go get golang.org/x/lint/golint \
     github.com/stretchr/testify \
     github.com/gusaul/go-dynamock \
     go.uber.org/zap \
+    github.com/go-playground/validator \
     github.com/satori/go.uuid \
     github.com/asaskevich/govalidator \
     github.com/gomodule/redigo/redis \
