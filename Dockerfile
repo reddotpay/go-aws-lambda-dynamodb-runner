@@ -7,6 +7,8 @@ ENV GOPATH /go
 ENV PATH ${GOPATH}/bin:$PATH
 ENV DEP_VERSION 0.5.0
 
+RUN go version
+
 RUN go get golang.org/x/lint/golint \
     github.com/aws/aws-sdk-go \
     github.com/aws/aws-dax-go \
