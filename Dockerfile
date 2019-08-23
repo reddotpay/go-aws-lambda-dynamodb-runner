@@ -33,6 +33,7 @@ RUN go get golang.org/x/lint/golint \
     github.com/reddotpay/retry \
     github.com/reddotpay/currency \
     github.com/reddotpay/metrics \
+    github.com/reddotpay/lambda-warmer \
     github.com/gorilla/schema \
     github.com/pariz/gountries \
     golang.org/x/net/context/ctxhttp \
