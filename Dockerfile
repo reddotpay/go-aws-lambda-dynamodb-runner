@@ -1,5 +1,5 @@
 # Base image:
-FROM golang:latest
+FROM golang:1.13.1
 LABEL maintainer="daryl.n.w.k@gmail.com"
 
 # Install golint
