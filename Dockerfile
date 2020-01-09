@@ -61,7 +61,6 @@ RUN apt-get update
 RUN apt-get install jq -y
 RUN apt-get install zip -y
 
-
 # Download the binary to bin folder in $GOPATH
 RUN curl -L -s https://github.com/golang/dep/releases/download/v${DEP_VERSION}/dep-linux-amd64 -o $GOPATH/bin/dep
 # Make the binary executable
