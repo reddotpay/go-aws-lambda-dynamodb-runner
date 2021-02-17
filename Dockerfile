@@ -8,7 +8,6 @@ ENV PATH ${GOPATH}/bin:$PATH
 ENV DEP_VERSION 0.5.0
 
 RUN go version
-
 RUN go get golang.org/x/lint/golint \
     github.com/aws/aws-sdk-go \
     github.com/aws/aws-dax-go \
@@ -51,15 +50,16 @@ RUN go get golang.org/x/lint/golint \
     github.com/shopspring/decimal \ 
     github.com/gofrs/uuid
 
-RUN curl -O https://bootstrap.pypa.io/get-pip.py
-RUN python get-pip.py --user
-RUN ~/.local/bin/pip --version
-RUN ~/.local/bin/pip install awscli --upgrade --user
-RUN ~/.local/bin/aws --version
-
 RUN apt-get update
-RUN apt-get install jq -y
-RUN apt-get install zip -y
+RUN apt-get install -y jq \
+    zip \
+    unzip \
+    python3.7 \
+    python3-venv
+   
+RUN ln -sf /usr/bin/python3.7 /usr/bin/python
+
+RUN curl "https://s3.amazonaws.com/aws-cli/awscli-bundle.zip" -o "awscli-bundle.zip" | unzip awscli-bundle.zip | ./awscli-bundle/install -i /usr/local/aws -b /usr/local/bin/aws
 
 # Download the binary to bin folder in $GOPATH
 RUN curl -L -s https://github.com/golang/dep/releases/download/v${DEP_VERSION}/dep-linux-amd64 -o $GOPATH/bin/dep
