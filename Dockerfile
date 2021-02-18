@@ -60,7 +60,8 @@ RUN apt-get install -y jq \
 RUN ln -sf /usr/bin/python3.7 /usr/bin/python
 
 RUN curl "https://s3.amazonaws.com/aws-cli/awscli-bundle.zip" -o "awscli-bundle.zip"
-RUN unzip awscli-bundle.zip | ./awscli-bundle/install -i /usr/local/aws -b /usr/local/bin/aws
+RUN unzip awscli-bundle.zip
+RUN ./awscli-bundle/install -i /usr/local/aws -b /usr/local/bin/aws
 
 # Download the binary to bin folder in $GOPATH
 RUN curl -L -s https://github.com/golang/dep/releases/download/v${DEP_VERSION}/dep-linux-amd64 -o $GOPATH/bin/dep
